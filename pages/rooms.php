@@ -35,8 +35,5 @@
     </div>
   </div>
 </div>
-<?php include('form_rooms_insert.php'); ?> 
-<?php include('form_rooms_update.php'); ?>   
-<?php include('form_rooms_select.php'); ?>
-<?php include('form_rooms_delete.php'); ?>
+
 <?php include('footer.php'); ?>

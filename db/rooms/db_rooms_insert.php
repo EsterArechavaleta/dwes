@@ -3,27 +3,22 @@
 	<body>
 		<?php
 			//Create variables
-			$date_in=$_POST['date_in'];
-            $date_out=$_POST['date_out'];
+			$room_number=$_POST['room_number'];
+            $room_category=$_POST['room_category'];
+			$room_price=$_POST['room_price'];
+
+			
 			$conn=mysqli_connect('localhost','root','','hotel3');
 
 			//Execute query
-			$sql="IF var_date_in<var_date_out THENSELECT room_number
-            FROM `048rooms` 
-            WHERE `room_number` NOT IN (SELECT room_number FROM 048_room_reservations WHERE date_in<'$date_out'  AND date_out>'$date_in');
-            END IF ";
+			$sql="INSERT INTO 048rooms (room_number, room_category, room_price, room_status, room_state)
+			VALUES (default, $croom_number, $room_category, $croom_price, ******,  active ";
 			
 			$result=mysqli_query($conn, $sql);
 			$cars=mysqli_fetch_all($result,MYSQLI_ASSOC);
 
 			mysqli_free_result($result);
 			mysqli_close($conn);
-
-			foreach ($048rooms as $room){
-				echo $room['room_number'];
-				echo '<br>';
-			}
-
 		?>
 	</body>
 </html>

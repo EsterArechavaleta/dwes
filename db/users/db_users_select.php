@@ -8,7 +8,8 @@
 			$conn=mysqli_connect('localhost','root','','hotel3');
 
 			//Execute query
-			$sql="IF var_date_in<var_date_out THENSELECT room_number
+			$sql=
+			"IF var_date_in<var_date_out THENSELECT room_number
             FROM `048rooms` 
             WHERE `room_number` NOT IN (SELECT room_number FROM 048_room_reservations WHERE date_in<'$date_out'  AND date_out>'$date_in');
             END IF ";

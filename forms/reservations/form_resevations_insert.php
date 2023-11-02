@@ -6,8 +6,8 @@
             <form action="./db/reservations/db_reservation_insert.php " method="post">
                 <label for="reservation_number">Número de reserva</label></br>
                 <input type="text" id="reservation_number" name="reservation_number"></br>
-                <label for="customer_id">Id del cliente</label></br>
-                <input type="text" id="customer_id" name="customer_id"></br>
+                <label for="user_id">Id del cliente</label></br>
+                <input type="text" id="user_id" name="user_id"></br>
                 <label for="date_in">Fecha de entrada: </label></br>
                 <input type="text" id="date_in" name="date_in"></br>
                 <label for="date_out">Fecha de salida: </label></br>
